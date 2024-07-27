@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b23jbb6exoarj"]
+
+[ext_resource type="PackedScene" uid="uid://dylj126f0qfg" path="res://tile_map.tscn" id="1_64rjg"]
+[ext_resource type="PackedScene" uid="uid://bnhrdb58l64ml" path="res://player.tscn" id="2_yqn2g"]
+
+[node name="Game" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_64rjg")]
+
+[node name="Player" parent="." instance=ExtResource("2_yqn2g")]
+position = Vector2(-136, -87)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(4, 4)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.223529, 0.223529, 0.223529, 1)
